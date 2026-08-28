@@ -252,7 +252,6 @@ footer {
     font-size: 0.9rem;
     width: 100%;
 }
-
 /* ESTILOS DE ALTO CONTRASTE (PRETO E ROXO) */
 body.high-contrast {
     background-color: #000000 !important;
@@ -278,7 +277,7 @@ body.high-contrast .quote {
 }
 
 body.high-contrast .card {
-    background: #0a0510 !important;
+    background: #000000 !important;
     border: 2px solid #a855f7 !important;
     box-shadow: none !important;
 }
