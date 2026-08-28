@@ -1,4 +1,4 @@
-/* Configuração Geral da Página */
+/* RESET BÁSICO E ESTILOS GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -6,106 +6,169 @@
 }
 
 body {
-    background-color: #0b0b0b; /* Preto de fundo */
-    color: #e0e0e0; /* Texto prata claro */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Container Principal Centralizado */
-.card-container {
-    background-color: #1a0508; /* Vinho bem escuro */
+/* HERO SECTION (LETRAS GRANDES CENTRALIZADAS NA TELA) */
+.hero {
+    height: 100vh; /* Ocupa 100% da altura da tela */
     width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    border: 3px solid #722f37; /* Borda cor Vinho */
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(114, 47, 55, 0.6), inset 0 0 15px rgba(192, 192, 192, 0.1);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
     text-align: center;
+    background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95)),
+                url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920') center/cover no-repeat;
+    border-bottom: 3px solid #e50914;
+    padding: 0 20px;
 }
 
-/* Cabeçalho */
-.header h1 {
-    color: #c0c0c0; /* Prata */
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
+.hero-content {
+    max-width: 900px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: #e50914; /* Vermelho Antimagia */
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.title-main {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsivo: fica gigante em telas grandes */
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.6), 0 0 40px rgba(0, 0, 0, 0.8);
+    line-height: 1.1;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-.header h2 {
-    color: #8b263e; /* Vinho claro */
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-/* Seção da Imagem */
-.image-section {
+.quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #66fcf1;
     margin-bottom: 30px;
 }
 
-.movie-poster {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-    border: 2px solid #c0c0c0; /* Borda Prata na imagem */
+.btn-explore {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+.btn-explore:hover {
+    background-color: #b20710;
+    transform: translateY(-3px);
+}
+
+/* LAYOUT E CONTAINER DE CONTEÚDO */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* CARDS DE INFORMAÇÕES */
+.card {
+    background: #1f2833;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    border-left: 4px solid #66fcf1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Conteúdo da Resenha */
-.content-section h3 {
-    color: #c0c0c0; /* Prata */
-    margin: 20px 0 15px 0;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #722f37;
-    padding-bottom: 8px;
+.card.highlighting {
+    border-left-color: #e50914;
 }
 
-/* Caixas dos Filmes Individualmente */
-.film-box {
-    background-color: #0d0204;
-    border: 1px solid #c0c0c0; /* Borda Prata nos blocos */
-    border-left: 4px solid #722f37; /* Detalhe Vinho à esquerda */
-    border-radius: 6px;
-    padding: 15px;
+.card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #fff;
     margin-bottom: 15px;
-    text-align: left;
 }
 
-.film-box h4 {
-    color: #e6b8c4; /* Vinho claro para os títulos dos filmes */
+.card p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* LISTA DOS TREVOS */
+.clover-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.clover-list li {
+    background: #0b0c10;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #45a29e;
+}
+
+.clover-list span {
+    color: #66fcf1;
+    font-weight: bold;
+}
+
+/* GRID DE PERSONAGENS */
+.grid-personagens, .grid-reinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.character-box, .realm-box {
+    background: #0b0c10;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+.character-box:hover {
+    border-color: #e50914;
+}
+
+.character-box h3, .realm-box h3 {
+    font-family: 'Cinzel', serif;
+    color: #66fcf1;
     margin-bottom: 8px;
 }
 
-.film-box p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #d1d1d1;
-    margin-bottom: 5px;
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0b0c10;
+    color: #666;
+    border-top: 1px solid #1f2833;
+    font-size: 0.9rem;
 }
 
-/* Divisória */
-.divider {
-    border: 0;
-    height: 1px;
-    background: #722f37;
-    margin: 30px 0;
-}
-
-/* Texto da Resenha Final */
-.review-text {
-    text-align: justify;
-    line-height: 1.6;
-    font-size: 1rem;
-    background-color: #0d0204;
-    padding: 15px;
-    border: 1px solid #722f37;
-    border-radius: 6px;
-    color: #e0e0e0;
+/* AJUSTES PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 600px) {
+    .quote {
+        font-size: 1rem;
+    }
+    .card {
+        padding: 20px;
+    }
 }
