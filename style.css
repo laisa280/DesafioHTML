@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* RESET BÁSICO E CENTRALIZAÇÃO GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +11,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    /* Centralização global do texto */
-    text-align: center;
+    text-align: center; /* Garantia de centralização de texto */
 }
 
-/* HERO SECTION (LETRAS GRANDES CENTRALIZADAS) */
+/* HERO SECTION: TÍTULO GIGANTE NO INÍCIO E CENTRALIZADO */
 .hero {
     height: 100vh;
     width: 100%;
@@ -25,35 +24,40 @@ body {
     text-align: center;
     background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95)),
                 url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920') center/cover no-repeat;
-    border-bottom: 3px solid #e50914;
+    border-bottom: 2px solid #5a626e;
     padding: 0 20px;
 }
 
 .hero-content {
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 5px;
-    color: #e50914;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-
+/* Título bem no topo/início do Hero */
 .title-main {
     font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3.2rem, 9vw, 6.5rem);
     font-weight: 900;
     color: #fff;
-    text-shadow: 0 0 20px rgba(229, 9, 20, 0.6), 0 0 40px rgba(0, 0, 0, 0.8);
-    line-height: 1.1;
+    text-shadow: 0 0 25px rgba(229, 9, 20, 0.6), 0 0 50px rgba(0, 0, 0, 0.9);
+    line-height: 1;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
+.subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    color: #e50914;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
 .quote {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-style: italic;
     color: #66fcf1;
     margin-bottom: 30px;
@@ -69,7 +73,7 @@ body {
     font-size: 1rem;
     border-radius: 25px;
     transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
 }
 
 .btn-explore:hover {
@@ -87,24 +91,20 @@ body {
     align-items: center;
 }
 
-/* CARDS PRINCIPAIS COM BORDAS E SOMBRAS CINZAS */
+/* CARDS COM BORDAS CINZA SUAVE E SOMBREAMENTO AMBIENTE */
 .card {
-    background: #15181c;
+    background: #14171c;
     width: 100%;
     padding: 35px 25px;
     border-radius: 12px;
     margin-bottom: 40px;
     
-    /* Bordinha e sombreamento cinza */
-    border: 2px solid #3a3f47;
-    box-shadow: 0 10px 25px rgba(128, 128, 128, 0.15), 
-                0 4px 10px rgba(0, 0, 0, 0.7);
+    /* Borda cinza suave e sombreamento ajustado */
+    border: 1px solid #3c424b;
+    box-shadow: 0 8px 24px rgba(120, 130, 140, 0.12), 
+                0 4px 12px rgba(0, 0, 0, 0.6);
     
     text-align: center;
-}
-
-.card.highlighting {
-    border-color: #5a626e;
 }
 
 .card h2 {
@@ -112,17 +112,17 @@ body {
     font-size: 2rem;
     color: #fff;
     margin-bottom: 20px;
-    border-bottom: 1px solid #2e343d;
-    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2f38;
+    padding-bottom: 12px;
 }
 
 .card p {
     margin-bottom: 15px;
     font-size: 1rem;
-    color: #d1d5db;
+    color: #c8cbd0;
 }
 
-/* ESTILIZAÇÃO DAS TEMPORADAS (RESENHA) */
+/* CAIXAS DAS TEMPORADAS */
 .season-container {
     display: flex;
     flex-direction: column;
@@ -131,14 +131,14 @@ body {
 }
 
 .season-box {
-    background: #0d0f12;
+    background: #0c0e11;
     padding: 25px;
     border-radius: 8px;
     
-    /* Borda e sombra cinza para cada temporada */
-    border: 1px solid #4a515a;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 
-                0 2px 8px rgba(160, 160, 160, 0.1);
+    /* Borda cinza suave individual */
+    border: 1px solid #323740;
+    box-shadow: 0 4px 14px rgba(100, 110, 120, 0.08), 
+                0 2px 6px rgba(0, 0, 0, 0.5);
     
     text-align: center;
 }
@@ -146,7 +146,7 @@ body {
 .season-box h3 {
     font-family: 'Cinzel', serif;
     color: #66fcf1;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-bottom: 5px;
 }
 
@@ -179,12 +179,12 @@ body {
 }
 
 .clover-list li {
-    background: #0d0f12;
+    background: #0c0e11;
     margin: 10px 0;
     padding: 12px 15px;
     border-radius: 6px;
-    border: 1px solid #3a3f47;
-    box-shadow: 0 3px 8px rgba(100, 100, 100, 0.1);
+    border: 1px solid #323740;
+    box-shadow: 0 3px 8px rgba(90, 100, 110, 0.08);
 }
 
 .clover-list span {
@@ -202,22 +202,21 @@ body {
 }
 
 .character-box, .realm-box {
-    background: #0d0f12;
+    background: #0c0e11;
     padding: 20px;
     border-radius: 8px;
     
-    /* Bordinhas e sombras cinza */
-    border: 1px solid #3a3f47;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 
-                0 2px 6px rgba(120, 120, 120, 0.1);
+    /* Borda cinza suave */
+    border: 1px solid #323740;
+    box-shadow: 0 4px 12px rgba(90, 100, 110, 0.08);
     
     text-align: center;
     transition: transform 0.2s, border-color 0.2s;
 }
 
 .character-box:hover, .realm-box:hover {
-    transform: translateY(-4px);
-    border-color: #6a727d;
+    transform: translateY(-3px);
+    border-color: #5a626e;
 }
 
 .character-box h3, .realm-box h3 {
@@ -226,13 +225,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* RODAPÉ */
+/* RODAPÉ CENTRALIZADO */
 footer {
     text-align: center;
     padding: 30px;
     background: #0b0c10;
-    color: #777;
-    border-top: 1px solid #2e343d;
+    color: #666;
+    border-top: 1px solid #2a2f38;
     font-size: 0.9rem;
     width: 100%;
 }
