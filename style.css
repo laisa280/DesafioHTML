@@ -1,4 +1,4 @@
-/* Configurações Gerais e Fundo Realista */
+/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
@@ -6,187 +6,194 @@
 }
 
 body {
-    background: radial-gradient(circle at center, #1a0307 0%, #050102 100%);
-    color: #e5e5e5;
-    font-family: 'Georgia', 'Times New Roman', serif;
+    /* Fundo escuro imersivo com luzes prateadas e vinho profundas */
+    background: 
+        radial-gradient(circle at 50% 10%, rgba(114, 47, 55, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
+        linear-gradient(180deg, #050102 0%, #0c0205 50%, #030001 100%);
+    background-attachment: fixed;
+    color: #e6e6e6;
+    font-family: 'EB Garamond', Georgia, serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 50px 20px;
+    padding: 40px 15px;
 }
 
-/* Container Principal com Estilo Realista em Vidro Escuro */
-.card-container {
-    background: rgba(26, 5, 10, 0.85);
-    backdrop-filter: blur(10px);
+/* Painel de Jogo (HUD) Realista */
+.game-hud {
     width: 100%;
-    max-width: 980px;
-    padding: 45px 35px;
-    border: 2px solid rgba(192, 192, 192, 0.3);
-    border-radius: 16px;
+    max-width: 950px;
+    background: linear-gradient(145deg, rgba(20, 3, 7, 0.95), rgba(8, 1, 3, 0.98));
+    border: 3px solid #5a1827;
+    border-radius: 6px;
     box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.9),
-        0 0 30px rgba(114, 47, 55, 0.4),
-        inset 0 0 15px rgba(255, 255, 255, 0.05);
+        0 0 35px rgba(0, 0, 0, 0.95),
+        0 0 25px rgba(114, 47, 55, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+
+/* Moldura Interna de Prata e Vinho */
+.hud-frame {
+    border: 2px solid rgba(192, 192, 192, 0.35);
+    border-radius: 4px;
+    padding: 45px 35px;
+    background: radial-gradient(circle at center, rgba(35, 7, 14, 0.3) 0%, transparent 80%);
     text-align: center;
 }
 
 /* Cabeçalho */
-.header h1 {
+.game-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(90deg, #42101b, #722f37, #42101b);
     color: #e0e0e0;
-    font-size: 3rem;
+    font-size: 1rem;
+    font-weight: 600;
     letter-spacing: 4px;
+    padding: 6px 18px;
+    margin-bottom: 20px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.header h1 {
+    font-family: 'Cinzel', serif;
+    color: #f0f0f0;
+    font-size: 3.5rem; /* Fonte ampliada */
+    letter-spacing: 7px;
     margin-bottom: 8px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(192, 192, 192, 0.4), 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(114, 47, 55, 0.8),
+        2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .header h2 {
-    color: #b53751;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 35px;
-    font-style: italic;
+    font-family: 'Cinzel', serif;
+    color: #d1526d;
+    font-size: 1.5rem; /* Fonte ampliada */
+    font-weight: 600;
+    margin-bottom: 45px;
+    letter-spacing: 2px;
+}
+
+/* Título de Seção */
+.section-title {
+    font-family: 'Cinzel', serif;
+    color: #c0c0c0;
+    margin: 40px 0 25px 0;
+    font-size: 2.2rem; /* Fonte ampliada */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #722f37;
+    padding-bottom: 12px;
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+}
+
+/* Cards Estilo Slot de Jogo */
+.quest-card {
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, rgba(15, 2, 5, 0.9), rgba(30, 5, 11, 0.85));
+    border: 1px solid rgba(192, 192, 192, 0.3);
+    border-left: 6px solid #722f37;
+    border-radius: 4px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.quest-card:hover {
+    border-color: #c0c0c0;
+    border-left-color: #b53751;
+    transform: translateY(-3px);
+    box-shadow: 
+        0 12px 25px rgba(0, 0, 0, 0.9),
+        0 0 15px rgba(114, 47, 55, 0.5);
+}
+
+.card-body {
+    text-align: left;
+}
+
+.card-body h4 {
+    font-family: 'Cinzel', serif;
+    color: #f3a6b6;
+    font-size: 1.8rem; /* Fonte ampliada */
+    margin-bottom: 14px;
     letter-spacing: 1px;
 }
 
-/* Pôster Principal */
-.image-section {
-    margin-bottom: 40px;
+.theme-tag {
+    background: rgba(114, 47, 55, 0.3);
+    border-left: 3px solid #c0c0c0;
+    padding: 8px 14px;
+    margin-bottom: 14px !important;
+    border-radius: 2px;
 }
 
-.movie-poster {
-    max-width: 320px;
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    border: 2px solid #c0c0c0;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(114, 47, 55, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.movie-poster:hover {
-    transform: scale(1.02);
-}
-
-/* Seções de Conteúdo */
-.content-section h3 {
-    color: #d1d1d1;
-    margin: 30px 0 25px 0;
-    font-size: 2rem;
-    border-bottom: 2px solid #722f37;
-    padding-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-}
-
-/* Cards dos Filmes (Realismo Lado a Lado) */
-.film-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 30px;
-    background: linear-gradient(145deg, #0d0204, #150407);
-    border: 1px solid rgba(192, 192, 192, 0.25);
-    border-left: 5px solid #722f37;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.film-card:hover {
-    border-color: rgba(192, 192, 192, 0.6);
-    box-shadow: 0 8px 25px rgba(114, 47, 55, 0.4);
-}
-
-/* Imagens dos Filmes */
-.film-img {
-    width: 160px;
-    height: 220px;
-    object-fit: cover;
-    border: 1px solid #c0c0c0;
-    border-radius: 8px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-}
-
-/* Caixa de Texto */
-.film-box {
-    text-align: left;
-    flex: 1;
-}
-
-.film-box h4 {
-    color: #f3b0be;
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    font-family: 'Segoe UI', sans-serif;
-    border-bottom: 1px solid rgba(114, 47, 55, 0.4);
-    padding-bottom: 6px;
-}
-
-.film-box p {
-    font-size: 1.15rem;
+.card-body p {
+    font-size: 1.4rem; /* Fonte ampliada */
     line-height: 1.7;
-    color: #e0e0e0;
-    margin-bottom: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e6e6e6;
 }
 
-.film-box strong {
-    color: #c0c0c0;
+.card-body strong {
+    color: #ffffff;
+    font-family: 'Cinzel', serif;
 }
 
-/* Divisória Estilizada */
+/* Divisória Metálica */
 .divider {
-    border: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, #722f37, #c0c0c0, #722f37, transparent);
-    margin: 45px 0;
+    margin: 55px 0;
 }
 
-/* Texto da Resenha Final */
+/* Caixa de Resenha Final */
+.review-box {
+    background: rgba(10, 1, 3, 0.95);
+    padding: 35px;
+    border: 1px solid #722f37;
+    border-radius: 4px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
 .review-text {
     text-align: justify;
     line-height: 1.8;
-    font-size: 1.25rem;
-    background: #090103;
-    padding: 25px;
-    border: 1px solid #722f37;
-    border-radius: 10px;
-    color: #e5e5e5;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
-    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.45rem; /* Fonte ampliada */
+    color: #f0f0f0;
 }
 
-/* Adaptabilidade Celulares */
-@media (max-width: 700px) {
-    .film-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .film-box {
-        text-align: center;
-    }
-
-    .film-img {
-        width: 180px;
-        height: 250px;
+/* Ajuste Responsivo para Celulares */
+@media (max-width: 768px) {
+    .hud-frame {
+        padding: 25px 15px;
     }
 
     .header h1 {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
+        letter-spacing: 3px;
     }
 
     .header h2 {
         font-size: 1.2rem;
     }
 
-    .film-box p {
-        font-size: 1.05rem;
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .card-body h4 {
+        font-size: 1.4rem;
+    }
+
+    .card-body p, .review-text {
+        font-size: 1.15rem;
     }
 }
