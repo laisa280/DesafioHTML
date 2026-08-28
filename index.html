@@ -12,7 +12,14 @@
 </head>
 <body>
 
-    <!-- HERO SECTION: Título Grande no Início e Tudo Centralizado -->
+    <!-- BOTÃO DE ALTO CONTRASTE (ACESSIBILIDADE) -->
+    <div class="contrast-container">
+        <button id="toggle-contrast" class="btn-contrast" onclick="toggleContrast()">
+            🌓 Alto Contraste
+        </button>
+    </div>
+
+    <!-- HERO SECTION: Título Gigante "BLACK CLOVER" Bem no Início -->
     <header class="hero">
         <div class="hero-content">
             <h1 class="title-main">BLACK CLOVER</h1>
@@ -56,7 +63,7 @@
                     <h3>2ª Temporada: Expansão do Lore e Trabalho em Equipe</h3>
                     <p class="episodes-tag">Episódios 52 ao 102</p>
                     <p>
-                        Esta fase firma a verdadeira identidade da série: **batalhas táticas em grupo**. O arco do Templo Subaquático se destaca ao mostrar que os Touros Negros precisam combinar magias distintas para vencer inimigos superiores (como na luta contra Vetto). O arco da Floresta das Bruxas expande o passado de Vanessa e revela segredos sobre as espadas de Asta.
+                        Esta fase firma a verdadeira identidade da série: <strong>batalhas táticas em grupo</strong>. O arco do Templo Subaquático se destaca ao mostrar que os Touros Negros precisam combinar magias distintas para vencer inimigos superiores (como na luta contra Vetto). O arco da Floresta das Bruxas expande o passado de Vanessa e revela segredos sobre as espadas de Asta.
                     </p>
                     <p><em>Ponto Forte:</em> Combates em equipe estratégicos e a estreia da forma "Black Asta".</p>
                     <p><em>Ponto Fraco:</em> Excesso de alívios cômicos repetitivos em episódios de transição.</p>
@@ -150,5 +157,11 @@
         <p>Site de fã sobre Black Clover. Informações baseadas na obra de Yūki Tabata e dados da Wikipédia.</p>
     </footer>
 
+    <!-- Script JS para o Botão de Alto Contraste -->
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
 </body>
 </html>

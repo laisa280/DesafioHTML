@@ -11,7 +11,34 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    text-align: center; /* Garantia de centralização de texto */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* BOTÃO DE ALTO CONTRASTE */
+.contrast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-contrast {
+    background-color: #14171c;
+    color: #fff;
+    border: 1px solid #5a626e;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-contrast:hover {
+    background-color: #e50914;
+    border-color: #e50914;
 }
 
 /* HERO SECTION: TÍTULO GIGANTE NO INÍCIO E CENTRALIZADO */
@@ -36,10 +63,9 @@ body {
     justify-content: center;
 }
 
-/* Título bem no topo/início do Hero */
 .title-main {
     font-family: 'Cinzel', serif;
-    font-size: clamp(3.2rem, 9vw, 6.5rem);
+    font-size: clamp(3.5rem, 10vw, 7rem);
     font-weight: 900;
     color: #fff;
     text-shadow: 0 0 25px rgba(229, 9, 20, 0.6), 0 0 50px rgba(0, 0, 0, 0.9);
@@ -91,19 +117,16 @@ body {
     align-items: center;
 }
 
-/* CARDS COM BORDAS CINZA SUAVE E SOMBREAMENTO AMBIENTE */
+/* CARDS COM BORDAS CINZA SUAVE E SOMBREAMENTO */
 .card {
     background: #14171c;
     width: 100%;
     padding: 35px 25px;
     border-radius: 12px;
     margin-bottom: 40px;
-    
-    /* Borda cinza suave e sombreamento ajustado */
     border: 1px solid #3c424b;
     box-shadow: 0 8px 24px rgba(120, 130, 140, 0.12), 
                 0 4px 12px rgba(0, 0, 0, 0.6);
-    
     text-align: center;
 }
 
@@ -134,12 +157,9 @@ body {
     background: #0c0e11;
     padding: 25px;
     border-radius: 8px;
-    
-    /* Borda cinza suave individual */
     border: 1px solid #323740;
-    box-shadow: 0 4px 14px rgba(100, 110, 120, 0.08), 
+    box-shadow: 0 4px 14px rgba(90, 100, 110, 0.08), 
                 0 2px 6px rgba(0, 0, 0, 0.5);
-    
     text-align: center;
 }
 
@@ -205,11 +225,8 @@ body {
     background: #0c0e11;
     padding: 20px;
     border-radius: 8px;
-    
-    /* Borda cinza suave */
     border: 1px solid #323740;
     box-shadow: 0 4px 12px rgba(90, 100, 110, 0.08);
-    
     text-align: center;
     transition: transform 0.2s, border-color 0.2s;
 }
@@ -236,6 +253,68 @@ footer {
     width: 100%;
 }
 
+/* ESTILOS DE ALTO CONTRASTE (ATIVADO VIA JS) */
+body.high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast .hero {
+    background: #000000 !important;
+    border-bottom: 3px solid #ffff00 !important;
+}
+
+body.high-contrast .title-main {
+    color: #ffff00 !important;
+    text-shadow: none !important;
+}
+
+body.high-contrast .subtitle {
+    color: #ffffff !important;
+}
+
+body.high-contrast .quote {
+    color: #00ffff !important;
+}
+
+body.high-contrast .card {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.high-contrast .card h2, 
+body.high-contrast .season-box h3,
+body.high-contrast .character-box h3,
+body.high-contrast .realm-box h3 {
+    color: #ffff00 !important;
+    border-bottom-color: #ffffff !important;
+}
+
+body.high-contrast .card p,
+body.high-contrast .season-box p,
+body.high-contrast .character-box p,
+body.high-contrast .realm-box p {
+    color: #ffffff !important;
+}
+
+body.high-contrast .season-box,
+body.high-contrast .character-box,
+body.high-contrast .realm-box,
+body.high-contrast .clover-list li {
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    box-shadow: none !important;
+}
+
+body.high-contrast .btn-explore,
+body.high-contrast .btn-contrast {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+    font-weight: 900 !important;
+}
+
 /* ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS */
 @media (max-width: 600px) {
     .quote {
@@ -243,5 +322,11 @@ footer {
     }
     .card {
         padding: 20px 15px;
+    }
+    .btn-contrast {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
     }
 }
