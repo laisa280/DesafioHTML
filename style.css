@@ -1,4 +1,4 @@
-/* Configurações Globais */
+/* Configurações Gerais - Tema Gaming RPG Sobrenatural */
 * {
     margin: 0;
     padding: 0;
@@ -6,179 +6,172 @@
 }
 
 body {
-    /* Fundo escuro imersivo com luzes prateadas e vinho profundas */
+    /* Fundo dinâmico com padrão de gradiente simulando atmosfera de jogo */
     background: 
-        radial-gradient(circle at 50% 10%, rgba(114, 47, 55, 0.4) 0%, transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(192, 192, 192, 0.1) 0%, transparent 50%),
-        linear-gradient(180deg, #050102 0%, #0c0205 50%, #030001 100%);
+        radial-gradient(circle at 50% 20%, rgba(139, 0, 0, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(192, 192, 192, 0.1) 0%, transparent 40%),
+        linear-gradient(180deg, #050103 0%, #0d0205 50%, #030001 100%);
     background-attachment: fixed;
     color: #e6e6e6;
-    font-family: 'EB Garamond', Georgia, serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 40px 15px;
+    padding: 40px 20px;
 }
 
-/* Painel de Jogo (HUD) Realista */
-.game-hud {
+/* Container Principal Estilo Interface de Jogo (HUD) */
+.game-card-container {
+    position: relative;
+    background: rgba(15, 3, 6, 0.92);
+    backdrop-filter: blur(12px);
     width: 100%;
-    max-width: 950px;
-    background: linear-gradient(145deg, rgba(20, 3, 7, 0.95), rgba(8, 1, 3, 0.98));
-    border: 3px solid #5a1827;
-    border-radius: 6px;
+    max-width: 900px;
+    padding: 50px 40px;
+    border: 2px solid #8b0000;
+    border-radius: 4px; /* Cantos secos típicos de UI de game */
     box-shadow: 
-        0 0 35px rgba(0, 0, 0, 0.95),
-        0 0 25px rgba(114, 47, 55, 0.5),
+        0 0 30px rgba(139, 0, 0, 0.5),
+        0 0 10px rgba(192, 192, 192, 0.2),
         inset 0 0 20px rgba(0, 0, 0, 0.9);
-    padding: 10px;
-}
-
-/* Moldura Interna de Prata e Vinho */
-.hud-frame {
-    border: 2px solid rgba(192, 192, 192, 0.35);
-    border-radius: 4px;
-    padding: 45px 35px;
-    background: radial-gradient(circle at center, rgba(35, 7, 14, 0.3) 0%, transparent 80%);
     text-align: center;
 }
 
-/* Cabeçalho */
+/* Detalhes de Cantos Neon de Jogo */
+.corner-light {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #c0c0c0;
+}
+.top-left { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.top-right { top: -2px; right: -2px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: -2px; left: -2px; border-right: none; border-top: none; }
+.bottom-right { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+/* Cabeçalho de Jogo */
 .game-badge {
     display: inline-block;
-    font-family: 'Cinzel', serif;
-    background: linear-gradient(90deg, #42101b, #722f37, #42101b);
-    color: #e0e0e0;
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 4px;
-    padding: 6px 18px;
-    margin-bottom: 20px;
-    border: 1px solid #c0c0c0;
+    background-color: #722f37;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 4px 14px;
+    margin-bottom: 15px;
     border-radius: 2px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    border: 1px solid #c0c0c0;
 }
 
 .header h1 {
-    font-family: 'Cinzel', serif;
-    color: #f0f0f0;
-    font-size: 3.5rem; /* Fonte ampliada */
-    letter-spacing: 7px;
+    color: #ffffff;
+    font-size: 3.4rem; /* Fonte ampliada */
+    letter-spacing: 6px;
     margin-bottom: 8px;
     text-transform: uppercase;
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.3),
-        0 0 20px rgba(114, 47, 55, 0.8),
-        2px 2px 4px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 15px rgba(192, 192, 192, 0.6), 0 0 25px rgba(139, 0, 0, 0.8);
 }
 
 .header h2 {
-    font-family: 'Cinzel', serif;
-    color: #d1526d;
+    color: #ff4d6d;
     font-size: 1.5rem; /* Fonte ampliada */
-    font-weight: 600;
-    margin-bottom: 45px;
+    font-weight: 400;
+    margin-bottom: 40px;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* Título de Seção */
+/* Título das Seções com Efeito Neon Vinho/Prata */
 .section-title {
-    font-family: 'Cinzel', serif;
     color: #c0c0c0;
-    margin: 40px 0 25px 0;
-    font-size: 2.2rem; /* Fonte ampliada */
-    letter-spacing: 4px;
+    margin: 35px 0 25px 0;
+    font-size: 2.1rem; /* Fonte ampliada */
+    letter-spacing: 3px;
     text-transform: uppercase;
     border-bottom: 2px solid #722f37;
-    padding-bottom: 12px;
-    text-shadow: 0 0 10px rgba(192, 192, 192, 0.4);
+    padding-bottom: 10px;
+    text-shadow: 0 0 8px rgba(192, 192, 192, 0.3);
 }
 
-/* Cards Estilo Slot de Jogo */
-.quest-card {
-    margin-bottom: 30px;
-    background: linear-gradient(135deg, rgba(15, 2, 5, 0.9), rgba(30, 5, 11, 0.85));
+/* Cards Estilo Slot/Quest de Jogo */
+.film-card {
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, rgba(20, 4, 8, 0.95), rgba(35, 6, 13, 0.95));
     border: 1px solid rgba(192, 192, 192, 0.3);
-    border-left: 6px solid #722f37;
+    border-left: 6px solid #8b0000;
+    padding: 25px;
     border-radius: 4px;
-    padding: 25px 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
 }
 
-.quest-card:hover {
+.film-card:hover {
     border-color: #c0c0c0;
-    border-left-color: #b53751;
-    transform: translateY(-3px);
-    box-shadow: 
-        0 12px 25px rgba(0, 0, 0, 0.9),
-        0 0 15px rgba(114, 47, 55, 0.5);
+    border-left-color: #ff1a40;
+    transform: translateX(5px);
+    box-shadow: 0 0 20px rgba(139, 0, 0, 0.6);
 }
 
-.card-body {
+.film-box {
     text-align: left;
 }
 
-.card-body h4 {
-    font-family: 'Cinzel', serif;
-    color: #f3a6b6;
-    font-size: 1.8rem; /* Fonte ampliada */
-    margin-bottom: 14px;
+.film-box h4 {
+    color: #ff859b;
+    font-size: 1.7rem; /* Fonte ampliada */
+    margin-bottom: 12px;
     letter-spacing: 1px;
 }
 
 .theme-tag {
-    background: rgba(114, 47, 55, 0.3);
+    background: rgba(139, 0, 0, 0.25);
     border-left: 3px solid #c0c0c0;
-    padding: 8px 14px;
-    margin-bottom: 14px !important;
-    border-radius: 2px;
+    padding: 6px 12px;
+    margin-bottom: 12px !important;
 }
 
-.card-body p {
-    font-size: 1.4rem; /* Fonte ampliada */
+.film-box p {
+    font-size: 1.35rem; /* Fonte ampliada */
     line-height: 1.7;
-    color: #e6e6e6;
+    color: #e0e0e0;
 }
 
-.card-body strong {
+.film-box strong {
     color: #ffffff;
-    font-family: 'Cinzel', serif;
 }
 
-/* Divisória Metálica */
+/* Divisória Futurista */
 .divider {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #722f37, #c0c0c0, #722f37, transparent);
-    margin: 55px 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #8b0000, #c0c0c0, #8b0000, transparent);
+    margin: 50px 0;
 }
 
-/* Caixa de Resenha Final */
+/* Caixas de Resenha Final Estilo Quarteirão de Mensagem de Game */
 .review-box {
-    background: rgba(10, 1, 3, 0.95);
-    padding: 35px;
-    border: 1px solid #722f37;
+    background: rgba(10, 2, 4, 0.9);
+    padding: 30px;
+    border: 1px solid #8b0000;
     border-radius: 4px;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
 .review-text {
     text-align: justify;
     line-height: 1.8;
-    font-size: 1.45rem; /* Fonte ampliada */
+    font-size: 1.4rem; /* Fonte ampliada */
     color: #f0f0f0;
 }
 
-/* Ajuste Responsivo para Celulares */
+/* Responsividade Celular */
 @media (max-width: 768px) {
-    .hud-frame {
-        padding: 25px 15px;
+    .game-card-container {
+        padding: 30px 20px;
     }
 
     .header h1 {
         font-size: 2.3rem;
-        letter-spacing: 3px;
     }
 
     .header h2 {
@@ -189,11 +182,11 @@ body {
         font-size: 1.6rem;
     }
 
-    .card-body h4 {
+    .film-box h4 {
         font-size: 1.4rem;
     }
 
-    .card-body p, .review-text {
+    .film-box p, .review-text {
         font-size: 1.15rem;
     }
 }

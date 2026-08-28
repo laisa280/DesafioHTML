@@ -3,82 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Saga Crepúsculo | Game Database</title>
-    <!-- Importação de fonte no estilo RPG/Fantasia -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=EB+Garamond:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>A Saga Crepúsculo | Game UI Database</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="game-hud">
-        <!-- Moldura externa realista -->
-        <div class="hud-frame">
-            <header class="header">
-                <span class="game-badge">BASE DE DADOS</span>
-                <h1>A SAGA CREPÚSCULO</h1>
-                <h2>ANÁLISE E RESENHA COMPLETA DA FRANQUIA</h2>
-            </header>
+    <main class="game-card-container">
+        <!-- Detalhes Estéticos de UI de Jogo nos Canto -->
+        <div class="corner-light top-left"></div>
+        <div class="corner-light top-right"></div>
+        <div class="corner-light bottom-left"></div>
+        <div class="corner-light bottom-right"></div>
 
-            <section class="content-section">
-                <h3 class="section-title">CAPÍTULOS DA SAGA</h3>
+        <header class="header">
+            <span class="game-badge">BASE DE DADOS DOS FILMES</span>
+            <h1>A SAGA CREPÚSCULO</h1>
+            <h2>ANÁLISE E RESENHA COMPLETA DA FRANQUIA</h2>
+        </header>
 
-                <!-- Filme 1 -->
-                <article class="quest-card">
-                    <div class="card-body">
-                        <h4>1. Crepúsculo (2008)</h4>
-                        <p class="theme-tag"><strong>Tema Central:</strong> O fascínio pelo desconhecido e a intensidade do primeiro amor.</p>
-                        <p>O filme introdutório possui uma estética indie marcante, com tons azuis e frios dirigidos por Catherine Hardwicke. Apresenta o dilema moral de Edward Cullen e a sensação de isolamento de Bella Swan em Forks, acompanhado por uma trilha sonora marcante.</p>
-                    </div>
-                </article>
+        <section class="content-section">
+            <h3 class="section-title">CAPÍTULOS DA SAGA</h3>
 
-                <!-- Filme 2 -->
-                <article class="quest-card">
-                    <div class="card-body">
-                        <h4>2. A Saga Crepúsculo: Lua Nova (2009)</h4>
-                        <p class="theme-tag"><strong>Tema Central:</strong> O luto amoroso, a depressão e a busca por conforto.</p>
-                        <p>Com fotografia em tons quentes e terrosos, o segundo capítulo foca na dor do término de Bella e no aprofundamento de sua amizade com Jacob Black, introduzindo a matilha de lobisomens e a ameaça dos Volturi.</p>
-                    </div>
-                </article>
-
-                <!-- Filme 3 -->
-                <article class="quest-card">
-                    <div class="card-body">
-                        <h4>3. A Saga Crepúsculo: Eclipse (2010)</h4>
-                        <p class="theme-tag"><strong>Tema Central:</strong> Escolhas, amadurecimento e a dualidade entre segurança e paixão.</p>
-                        <p>Com um tom mais sombrio e focado na ação sob a direção de David Slade, o filme traz o auge do triângulo amoroso e uma aliança temporária entre vampiros e lobisomens para combater um exército de recém-criados.</p>
-                    </div>
-                </article>
-
-                <!-- Filme 4 -->
-                <article class="quest-card">
-                    <div class="card-body">
-                        <h4>4. A Saga Crepúsculo: Amanhecer - Parte 1 (2011)</h4>
-                        <p class="theme-tag"><strong>Tema Central:</strong> As consequências das escolhas adultas (casamento, maternidade e sacrifício).</p>
-                        <p>A narrativa se divide entre o romance idílico do casamento/lua de mel e a tensão psicológica da gravidez de alto risco de Bella, mostrando a deterioração física da personagem e a união do grupo para salvá-la.</p>
-                    </div>
-                </article>
-
-                <!-- Filme 5 -->
-                <article class="quest-card">
-                    <div class="card-body">
-                        <h4>5. A Saga Crepúsculo: Amanhecer - Parte 2 (2012)</h4>
-                        <p class="theme-tag"><strong>Tema Central:</strong> União familiar, legado e o encerramento do ciclo.</p>
-                        <p>O encerramento apresenta Bella adaptada à sua vida e aos seus poderes vampíricos. O filme se destaca pela apresentação de clãs de vampiros ao redor do mundo e pela alteração na cena da batalha final em relação ao livro.</p>
-                    </div>
-                </article>
-
-                <div class="divider"></div>
-
-                <h3 class="section-title">RESENHA CRÍTICA FINAL</h3>
-                <div class="review-box">
-                    <p class="review-text">
-                        A <em>Saga Crepúsculo</em> funciona como um retrato das emoções intensas da adolescência. A franquia utilizou elementos do folclore de vampiros e lobisomens para simular os conflitos de amadurecimento, autocontrole e escolhas amorosas. Cada filme passou por visões de direção distintas que permitiram à saga evoluir visualmente e acompanhar o amadurecimento de seu público, mantendo-se como um fenômeno da cultura pop.
-                    </p>
+            <!-- Filme 1 -->
+            <div class="film-card">
+                <div class="film-box">
+                    <h4>1. Crepúsculo (2008)</h4>
+                    <p class="theme-tag"><strong>Tema Central:</strong> O fascínio pelo desconhecido e a intensidade do primeiro amor.</p>
+                    <p>O filme introdutório possui uma estética indie marcante, com tons azuis e frios dirigidos por Catherine Hardwicke. Apresenta o dilema moral de Edward Cullen e a sensação de isolamento de Bella Swan em Forks, acompanhado por uma trilha sonora marcante.</p>
                 </div>
-            </section>
-        </div>
+            </div>
+
+            <!-- Filme 2 -->
+            <div class="film-card">
+                <div class="film-box">
+                    <h4>2. A Saga Crepúsculo: Lua Nova (2009)</h4>
+                    <p class="theme-tag"><strong>Tema Central:</strong> O luto amoroso, a depressão e a busca por conforto.</p>
+                    <p>Com fotografia em tons quentes e terrosos, o segundo capítulo foca na dor do término de Bella e no aprofundamento de sua amizade com Jacob Black, introduzindo a matilha de lobisomens e a ameaça dos Volturi.</p>
+                </div>
+            </div>
+
+            <!-- Filme 3 -->
+            <div class="film-card">
+                <div class="film-box">
+                    <h4>3. A Saga Crepúsculo: Eclipse (2010)</h4>
+                    <p class="theme-tag"><strong>Tema Central:</strong> Escolhas, amadurecimento e a dualidade entre segurança e paixão.</p>
+                    <p>Com um tom mais sombrio e focado na ação sob a direção de David Slade, o filme traz o auge do triângulo amoroso e uma aliança temporária entre vampiros e lobisomens para combater um exército de recém-criados.</p>
+                </div>
+            </div>
+
+            <!-- Filme 4 -->
+            <div class="film-card">
+                <div class="film-box">
+                    <h4>4. A Saga Crepúsculo: Amanhecer - Parte 1 (2011)</h4>
+                    <p class="theme-tag"><strong>Tema Central:</strong> As consequências das escolhas adultas (casamento, maternidade e sacrifício).</p>
+                    <p>A narrativa se divide entre o romance idílico do casamento/lua de mel e a tensão psicológica da gravidez de alto risco de Bella, mostrando a deterioração física da personagem e a união do grupo para salvá-la.</p>
+                </div>
+            </div>
+
+            <!-- Filme 5 -->
+            <div class="film-card">
+                <div class="film-box">
+                    <h4>5. A Saga Crepúsculo: Amanhecer - Parte 2 (2012)</h4>
+                    <p class="theme-tag"><strong>Tema Central:</strong> União familiar, legado e o encerramento do ciclo.</p>
+                    <p>O encerramento apresenta Bella adaptada à sua vida e aos seus poderes vampíricos. O filme se destaca pela apresentação de clãs de vampiros ao redor do mundo e pela alteração na cena da batalha final em relação ao livro.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="section-title">RESENHA CRÍTICA FINAL</h3>
+            <div class="review-box">
+                <p class="review-text">
+                    A <em>Saga Crepúsculo</em> funciona como um retrato das emoções intensas da adolescência. A franquia utilizou elementos do folclore de vampiros e lobisomens para simular os conflitos de amadurecimento, autocontrole e escolhas amorosas. Cada filme passou por visões de direção distintas que permitiram à saga evoluir visualmente e acompanhar o amadurecimento de seu público, mantendo-se como um fenômeno da cultura pop.
+                </p>
+            </div>
+        </section>
     </main>
 
 </body>
