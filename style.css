@@ -1,14 +1,4 @@
-:root {
-    --vinho-principal: #4a0e17;
-    --vinho-escuro: #2a050b;
-    --vinho-destaque: #7a1c29;
-    --prata-brilhante: #f0f0f2;
-    --prata-texto: #c8c8cf;
-    --prata-borda: #4a4a52;
-    --preto-fundo: #0a0a0c;
-    --preto-card: #121216;
-}
-
+/* Configuração Geral da Página */
 * {
     margin: 0;
     padding: 0;
@@ -16,235 +6,106 @@
 }
 
 body {
-    background-color: var(--preto-fundo);
-    color: var(--prata-texto);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.7;
-}
-
-h1, h2, h3 {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 1px;
-}
-
-.hero {
-    position: relative;
-    height: 60vh;
-    background: url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    background-color: #0b0b0b; /* Preto de fundo */
+    color: #e0e0e0; /* Texto prata claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-bottom: 3px solid var(--vinho-principal);
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(10, 10, 12, 0.6) 0%, rgba(42, 5, 11, 0.85) 100%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 20px;
-    max-width: 800px;
-}
-
-.sub-title {
-    color: var(--prata-brilhante);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    font-size: 3.2rem;
-    color: var(--prata-brilhante);
-    text-shadow: 0 0 15px rgba(122, 28, 41, 0.8);
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: var(--prata-texto);
-    font-size: 1.1rem;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    color: var(--prata-brilhante);
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: var(--vinho-destaque);
-    margin: 10px auto 0;
-}
-
-.feedbacks-gerais {
-    margin-bottom: 80px;
-}
-
-.cards-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: var(--preto-card);
-    border: 1px solid var(--prata-borda);
-    border-left: 4px solid var(--vinho-principal);
-    border-radius: 6px;
-    padding: 25px;
-    flex: 1;
-    min-width: 280px;
-    transition: transform 0.3s, border-color 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--vinho-destaque);
-}
-
-.badge {
-    background-color: var(--vinho-escuro);
-    color: var(--prata-brilhante);
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: 1px solid var(--vinho-destaque);
-}
-
-.card h3 {
-    color: var(--prata-brilhante);
-    margin: 15px 0 10px 0;
-    font-size: 1.2rem;
-}
-
-.card p {
-    font-size: 0.95rem;
-    color: var(--prata-texto);
-}
-
-.resenhas {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.filme-item {
-    display: flex;
-    background-color: var(--preto-card);
-    border: 1px solid var(--prata-borda);
-    border-radius: 8px;
-    overflow: hidden;
     align-items: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    transition: border-color 0.3s;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
-.filme-item:hover {
-    border-color: var(--vinho-destaque);
-}
-
-.filme-item.inverso {
-    flex-direction: row-reverse;
-}
-
-.filme-img {
-    flex: 1;
-    min-width: 40%;
-    height: 320px;
-}
-
-.filme-img img {
+/* Container Principal Centralizado */
+.card-container {
+    background-color: #1a0508; /* Vinho bem escuro */
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.85) contrast(1.1);
-    transition: transform 0.5s ease;
-}
-
-.filme-item:hover .filme-img img {
-    transform: scale(1.05);
-    filter: brightness(1);
-}
-
-.filme-texto {
-    flex: 1.2;
-    padding: 35px;
-}
-
-.ano {
-    color: var(--vinho-destaque);
-    font-weight: bold;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-}
-
-.filme-texto h3 {
-    font-size: 1.6rem;
-    color: var(--prata-brilhante);
-    margin: 5px 0 15px 0;
-}
-
-.resumo {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
-
-.ponto-forte {
-    background-color: rgba(74, 14, 23, 0.3);
-    border-left: 3px solid var(--vinho-destaque);
-    padding: 12px 15px;
-    font-size: 0.9rem;
-    color: var(--prata-brilhante);
-}
-
-footer {
-    text-align: center;
+    max-width: 800px;
     padding: 30px;
-    background-color: var(--preto-card);
-    border-top: 1px solid var(--vinho-escuro);
-    color: var(--prata-borda);
-    font-size: 0.85rem;
+    border: 3px solid #722f37; /* Borda cor Vinho */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(114, 47, 55, 0.6), inset 0 0 15px rgba(192, 192, 192, 0.1);
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-    .filme-item, .filme-item.inverso {
-        flex-direction: column;
-    }
+/* Cabeçalho */
+.header h1 {
+    color: #c0c0c0; /* Prata */
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
 
-    .filme-img {
-        width: 100%;
-        height: 220px;
-    }
+.header h2 {
+    color: #8b263e; /* Vinho claro */
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+/* Seção da Imagem */
+.image-section {
+    margin-bottom: 30px;
+}
 
-    .filme-texto {
-        padding: 20px;
-    }
+.movie-poster {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border: 2px solid #c0c0c0; /* Borda Prata na imagem */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Conteúdo da Resenha */
+.content-section h3 {
+    color: #c0c0c0; /* Prata */
+    margin: 20px 0 15px 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #722f37;
+    padding-bottom: 8px;
+}
+
+/* Caixas dos Filmes Individualmente */
+.film-box {
+    background-color: #0d0204;
+    border: 1px solid #c0c0c0; /* Borda Prata nos blocos */
+    border-left: 4px solid #722f37; /* Detalhe Vinho à esquerda */
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.film-box h4 {
+    color: #e6b8c4; /* Vinho claro para os títulos dos filmes */
+    margin-bottom: 8px;
+}
+
+.film-box p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #d1d1d1;
+    margin-bottom: 5px;
+}
+
+/* Divisória */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #722f37;
+    margin: 30px 0;
+}
+
+/* Texto da Resenha Final */
+.review-text {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1rem;
+    background-color: #0d0204;
+    padding: 15px;
+    border: 1px solid #722f37;
+    border-radius: 6px;
+    color: #e0e0e0;
 }
