@@ -1,110 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Twilight Saga | Game Database</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Saga Crepúsculo | Netflix Clone</title>
+    <!-- Fonte estilo Netflix (Bebas Neue para títulos e Roboto para textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1 class="game-title">TWILIGHT</h1>
-      <p class="game-subtitle">Análise de Universo & Franquia</p>
-      <a href="#analise" class="btn-main">Explorar Lore</a>
-    </div>
-  </header>
+    <!-- Barra de Navegação Estilo Netflix -->
+    <nav class="netflix-nav">
+        <div class="logo">SAGAFLIX</div>
+        <div class="nav-links">
+            <span>Início</span>
+            <span class="active">Filmes</span>
+            <span>Resenha</span>
+        </div>
+    </nav>
 
-  <main class="container" id="analise">
-    
-    <section class="card">
-      <h2>Visão Geral do Universo</h2>
-      <p>A Saga Crepúsculo redefiniu o mito dos vampiros no entretenimento moderno, substituindo o terror tradicional por uma fantasia romântica focada no conflito entre desejo, controle e destino.</p>
-      
-      <div class="stats-grid">
-        <div class="stat-box">
-          <span class="stat-number">5</span>
-          <span class="stat-label">Filmes</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">$3.3B</span>
-          <span class="stat-label">Bilheteria Global</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Livros Principais</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Capítulos da Saga</h2>
-      <div class="timeline">
+    <main class="netflix-container">
         
-        <div class="timeline-item">
-          <div class="badge">Capítulo I</div>
-          <h3>Crepúsculo (2008)</h3>
-          <p><strong>Estética:</strong> Fria, tons esverdeados, estilo indie.</p>
-          <p>Foco na descoberta do mundo sobrenatural e no isolamento de Forks. Estabelece a atmosfera melancólica da franquia.</p>
-        </div>
+        <!-- Banner Principal (Hero Section) -->
+        <header class="hero-banner">
+            <div class="hero-content">
+                <span class="badge-original">ORIGINAL SAGAFLIX</span>
+                <h1>A SAGA CREPÚSCULO</h1>
+                <p class="hero-subtitle">5 TEMPORADAS / FILMES • ROMANCE • FANTASIA</p>
+                <p class="hero-desc">A jornada inesquecível de Bella Swan, Edward Cullen e Jacob Black. Uma análise detalhada sobre amor, escolhas e imortalidade.</p>
+            </div>
+        </header>
 
-        <div class="timeline-item">
-          <div class="badge">Capítulo II</div>
-          <h3>Lua Nova (2009)</h3>
-          <p><strong>Estética:</strong> Cores terrosas, tons quentes.</p>
-          <p>Expansão da mitologia com a introdução da matilha Quileute e a realeza dos Volturi. Foco no luto e no isolamento.</p>
-        </div>
+        <!-- Seção de Episódios / Filmes (Lista Estilo Netflix) -->
+        <section class="content-section">
+            <h2 class="section-title">TODOS OS FILMES</h2>
 
-        <div class="timeline-item">
-          <div class="badge">Capítulo III</div>
-          <h3>Eclipse (2010)</h3>
-          <p><strong>Estética:</strong> Escura, focada em suspense e ação.</p>
-          <p>O ápice do conflito territorial e do triângulo amoroso, culminando na batalha contra os recém-criados em Seattle.</p>
-        </div>
+            <!-- Filme 1 -->
+            <article class="netflix-card">
+                <div class="card-number">1</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>Crepúsculo (2008)</h3>
+                        <span class="match-score">98% de compatibilidade</span>
+                    </div>
+                    <p class="theme-tag"><strong>Tema Central:</strong> O fascínio pelo desconhecido e a intensidade do primeiro amor.</p>
+                    <p class="card-desc">O filme introdutório possui uma estética indie marcante, com tons azuis e frios dirigidos por Catherine Hardwicke. Apresenta o dilema moral de Edward Cullen e a sensação de isolamento de Bella Swan em Forks, acompanhado por uma trilha sonora marcante.</p>
+                </div>
+            </article>
 
-        <div class="timeline-item">
-          <div class="badge">Capítulo IV</div>
-          <h3>Amanhecer - Parte 1 (2011)</h3>
-          <p><strong>Estética:</strong> Horror corporal e drama pessoal.</p>
-          <p>A transição de Bella da vida humana para o sobrenatural, abordando as consequências físicas e psicológicas de sua escolha.</p>
-        </div>
+            <!-- Filme 2 -->
+            <article class="netflix-card">
+                <div class="card-number">2</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Lua Nova (2009)</h3>
+                        <span class="match-score">95% de compatibilidade</span>
+                    </div>
+                    <p class="theme-tag"><strong>Tema Central:</strong> O luto amoroso, a depressão e a busca por conforto.</p>
+                    <p class="card-desc">Com fotografia em tons quentes e terrosos, o segundo capítulo foca na dor do término de Bella e no aprofundamento de sua amizade com Jacob Black, introduzindo a matilha de lobisomens e a ameaça dos Volturi.</p>
+                </div>
+            </article>
 
-        <div class="timeline-item">
-          <div class="badge">Capítulo V</div>
-          <h3>Amanhecer - Parte 2 (2012)</h3>
-          <p><strong>Estética:</strong> Épica, cores saturadas.</p>
-          <p>Confronto final contra os Volturi, destacando a adaptação de Bella como vampira e a união dos clãs globais.</p>
-        </div>
+            <!-- Filme 3 -->
+            <article class="netflix-card">
+                <div class="card-number">3</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Eclipse (2010)</h3>
+                        <span class="match-score">97% de compatibilidade</span>
+                    </div>
+                    <p class="theme-tag"><strong>Tema Central:</strong> Escolhas, amadurecimento e a dualidade entre segurança e paixão.</p>
+                    <p class="card-desc">Com um tom mais sombrio e focado na ação sob a direção de David Slade, o filme traz o auge do triângulo amoroso e uma aliança temporária entre vampiros e lobisomens para combater um exército de recém-criados.</p>
+                </div>
+            </article>
 
-      </div>
-    </section>
+            <!-- Filme 4 -->
+            <article class="netflix-card">
+                <div class="card-number">4</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Amanhecer - Parte 1 (2011)</h3>
+                        <span class="match-score">94% de compatibilidade</span>
+                    </div>
+                    <p class="theme-tag"><strong>Tema Central:</strong> As consequências das escolhas adultas (casamento, maternidade e sacrifício).</p>
+                    <p class="card-desc">A narrativa se divide entre o romance idílico do casamento/lua de mel e a tensão psicológica da gravidez de alto risco de Bella, mostrando a deterioração física da personagem e a união do grupo para salvá-la.</p>
+                </div>
+            </article>
 
-    <section class="card">
-      <h2>Facções & Mitologia</h2>
-      <div class="factions">
-        <div class="faction-card cullen">
-          <h3>Clã Cullen</h3>
-          <p>Vampiros "vegetarianos" que renunciaram ao sangue humano, priorizando a moralidade e a preservação do disfarce entre os mortais.</p>
-        </div>
-        <div class="faction-card quileute">
-          <h3>Matilha Quileute</h3>
-          <p>Protetores nativos capazes de se transformar em lobos gigantescos para defender seu território de ameaças vampíricas.</p>
-        </div>
-        <div class="faction-card volturi">
-          <h3>Os Volturi</h3>
-          <p>A antiga realeza vampírica sediada na Itália, responsável por impor as leis da espécie e manter o segredo de sua existência.</p>
-        </div>
-      </div>
-    </section>
+            <!-- Filme 5 -->
+            <article class="netflix-card">
+                <div class="card-number">5</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Amanhecer - Parte 2 (2012)</h3>
+                        <span class="match-score">99% de compatibilidade</span>
+                    </div>
+                    <p class="theme-tag"><strong>Tema Central:</strong> União familiar, legado e o encerramento do ciclo.</p>
+                    <p class="card-desc">O encerramento apresenta Bella adaptada à sua vida e aos seus poderes vampíricos. O filme se destaca pela apresentação de clãs de vampiros ao redor do mundo e pela alteração na cena da batalha final em relação ao livro.</p>
+                </div>
+            </article>
 
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Twilight Game Database — Interface Conceitual</p>
-  </footer>
+            <!-- Resenha Final -->
+            <h2 class="section-title">RESENHA CRÍTICA</h2>
+            <div class="review-box">
+                <p class="review-text">
+                    A <em>Saga Crepúsculo</em> funciona como um retrato das emoções intensas da adolescência. A franquia utilizou elementos do folclore de vampiros e lobisomens para simular os conflitos de amadurecimento, autocontrole e escolhas amorosas. Cada filme passou por visões de direção distintas que permitiram à saga evoluir visualmente e acompanhar o amadurecimento de seu público, mantendo-se como um fenômeno da cultura pop.
+                </p>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
