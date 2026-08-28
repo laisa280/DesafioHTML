@@ -3,75 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Saga Crepúsculo | Game UI Database</title>
+    <title>SagaFlix | A Saga Crepúsculo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="game-card-container">
-        <!-- Detalhes Estéticos de UI de Jogo nos Canto -->
-        <div class="corner-light top-left"></div>
-        <div class="corner-light top-right"></div>
-        <div class="corner-light bottom-left"></div>
-        <div class="corner-light bottom-right"></div>
+    <!-- Barra de Navegação Estilo Netflix -->
+    <nav class="netflix-nav">
+        <div class="logo">SAGAFLIX</div>
+        <div class="nav-links">
+            <span class="active">Início</span>
+            <span>Filmes</span>
+            <span>Resenha</span>
+        </div>
+    </nav>
 
-        <header class="header">
-            <span class="game-badge">BASE DE DADOS DOS FILMES</span>
-            <h1>A SAGA CREPÚSCULO</h1>
-            <h2>ANÁLISE E RESENHA COMPLETA DA FRANQUIA</h2>
+    <main class="netflix-container">
+        
+        <!-- Banner Principal (Hero Section) -->
+        <header class="hero-banner">
+            <div class="hero-content">
+                <div class="brand-row">
+                    <span class="n-logo">N</span>
+                    <span class="badge-original">FILME</span>
+                </div>
+                <h1>A SAGA CREPÚSCULO</h1>
+                <div class="meta-info">
+                    <span class="match-score">98% de compatibilidade</span>
+                    <span class="year">2008 - 2012</span>
+                    <span class="age-badge">12</span>
+                    <span class="quality-badge">4K Ultra HD</span>
+                </div>
+                <p class="hero-desc">A jornada inesquecível de Bella Swan, Edward Cullen e Jacob Black. Uma análise detalhada sobre amor, escolhas e o universo sobrenatural.</p>
+            </div>
         </header>
 
+        <!-- Seção de Episódios / Filmes -->
         <section class="content-section">
-            <h3 class="section-title">CAPÍTULOS DA SAGA</h3>
+            <h2 class="section-title">FILMES DA FRANQUIA</h2>
 
             <!-- Filme 1 -->
-            <div class="film-card">
-                <div class="film-box">
-                    <h4>1. Crepúsculo (2008)</h4>
+            <article class="netflix-card">
+                <div class="card-number">1</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>Crepúsculo (2008)</h3>
+                        <span class="duration">122 min</span>
+                    </div>
                     <p class="theme-tag"><strong>Tema Central:</strong> O fascínio pelo desconhecido e a intensidade do primeiro amor.</p>
-                    <p>O filme introdutório possui uma estética indie marcante, com tons azuis e frios dirigidos por Catherine Hardwicke. Apresenta o dilema moral de Edward Cullen e a sensação de isolamento de Bella Swan em Forks, acompanhado por uma trilha sonora marcante.</p>
+                    <p class="card-desc">O filme introdutório possui uma estética indie marcante, com tons azuis e frios dirigidos por Catherine Hardwicke. Apresenta o dilema moral de Edward Cullen e a sensação de isolamento de Bella Swan em Forks, acompanhado por uma trilha sonora marcante.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Filme 2 -->
-            <div class="film-card">
-                <div class="film-box">
-                    <h4>2. A Saga Crepúsculo: Lua Nova (2009)</h4>
+            <article class="netflix-card">
+                <div class="card-number">2</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Lua Nova (2009)</h3>
+                        <span class="duration">130 min</span>
+                    </div>
                     <p class="theme-tag"><strong>Tema Central:</strong> O luto amoroso, a depressão e a busca por conforto.</p>
-                    <p>Com fotografia em tons quentes e terrosos, o segundo capítulo foca na dor do término de Bella e no aprofundamento de sua amizade com Jacob Black, introduzindo a matilha de lobisomens e a ameaça dos Volturi.</p>
+                    <p class="card-desc">Com fotografia em tons quentes e terrosos, o segundo capítulo foca na dor do término de Bella e no aprofundamento de sua amizade com Jacob Black, introduzindo a matilha de lobisomens e a ameaça dos Volturi.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Filme 3 -->
-            <div class="film-card">
-                <div class="film-box">
-                    <h4>3. A Saga Crepúsculo: Eclipse (2010)</h4>
+            <article class="netflix-card">
+                <div class="card-number">3</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Eclipse (2010)</h3>
+                        <span class="duration">124 min</span>
+                    </div>
                     <p class="theme-tag"><strong>Tema Central:</strong> Escolhas, amadurecimento e a dualidade entre segurança e paixão.</p>
-                    <p>Com um tom mais sombrio e focado na ação sob a direção de David Slade, o filme traz o auge do triângulo amoroso e uma aliança temporária entre vampiros e lobisomens para combater um exército de recém-criados.</p>
+                    <p class="card-desc">Com um tom mais sombrio e focado na ação sob a direção de David Slade, o filme traz o auge do triângulo amoroso e uma aliança temporária entre vampiros e lobisomens para combater um exército de recém-criados.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Filme 4 -->
-            <div class="film-card">
-                <div class="film-box">
-                    <h4>4. A Saga Crepúsculo: Amanhecer - Parte 1 (2011)</h4>
+            <article class="netflix-card">
+                <div class="card-number">4</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Amanhecer - Parte 1 (2011)</h3>
+                        <span class="duration">117 min</span>
+                    </div>
                     <p class="theme-tag"><strong>Tema Central:</strong> As consequências das escolhas adultas (casamento, maternidade e sacrifício).</p>
-                    <p>A narrativa se divide entre o romance idílico do casamento/lua de mel e a tensão psicológica da gravidez de alto risco de Bella, mostrando a deterioração física da personagem e a união do grupo para salvá-la.</p>
+                    <p class="card-desc">A narrativa se divide entre o romance idílico do casamento/lua de mel e a tensão psicológica da gravidez de alto risco de Bella, mostrando a deterioração física da personagem e a união do grupo para salvá-la.</p>
                 </div>
-            </div>
+            </article>
 
             <!-- Filme 5 -->
-            <div class="film-card">
-                <div class="film-box">
-                    <h4>5. A Saga Crepúsculo: Amanhecer - Parte 2 (2012)</h4>
+            <article class="netflix-card">
+                <div class="card-number">5</div>
+                <div class="card-info">
+                    <div class="card-header">
+                        <h3>A Saga Crepúsculo: Amanhecer - Parte 2 (2012)</h3>
+                        <span class="duration">115 min</span>
+                    </div>
                     <p class="theme-tag"><strong>Tema Central:</strong> União familiar, legado e o encerramento do ciclo.</p>
-                    <p>O encerramento apresenta Bella adaptada à sua vida e aos seus poderes vampíricos. O filme se destaca pela apresentação de clãs de vampiros ao redor do mundo e pela alteração na cena da batalha final em relação ao livro.</p>
+                    <p class="card-desc">O encerramento apresenta Bella adaptada à sua vida e aos seus poderes vampíricos. O filme se destaca pela apresentação de clãs de vampiros ao redor do mundo e pela alteração na cena da batalha final em relação ao livro.</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="divider"></div>
-
-            <h3 class="section-title">RESENHA CRÍTICA FINAL</h3>
+            <!-- Resenha Final -->
+            <h2 class="section-title">RESENHA CRÍTICA GERAL</h2>
             <div class="review-box">
                 <p class="review-text">
                     A <em>Saga Crepúsculo</em> funciona como um retrato das emoções intensas da adolescência. A franquia utilizou elementos do folclore de vampiros e lobisomens para simular os conflitos de amadurecimento, autocontrole e escolhas amorosas. Cada filme passou por visões de direção distintas que permitiram à saga evoluir visualmente e acompanhar o amadurecimento de seu público, mantendo-se como um fenômeno da cultura pop.
