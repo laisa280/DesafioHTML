@@ -253,7 +253,7 @@ footer {
     width: 100%;
 }
 
-/* ESTILOS DE ALTO CONTRASTE (ATIVADO VIA JS) */
+/* ESTILOS DE ALTO CONTRASTE (PRETO E ROXO) */
 body.high-contrast {
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -261,12 +261,12 @@ body.high-contrast {
 
 body.high-contrast .hero {
     background: #000000 !important;
-    border-bottom: 3px solid #ffff00 !important;
+    border-bottom: 3px solid #a855f7 !important;
 }
 
 body.high-contrast .title-main {
-    color: #ffff00 !important;
-    text-shadow: none !important;
+    color: #c084fc !important;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.6) !important;
 }
 
 body.high-contrast .subtitle {
@@ -274,12 +274,12 @@ body.high-contrast .subtitle {
 }
 
 body.high-contrast .quote {
-    color: #00ffff !important;
+    color: #e9d5ff !important;
 }
 
 body.high-contrast .card {
-    background: #000000 !important;
-    border: 2px solid #ffffff !important;
+    background: #0a0510 !important;
+    border: 2px solid #a855f7 !important;
     box-shadow: none !important;
 }
 
@@ -287,8 +287,8 @@ body.high-contrast .card h2,
 body.high-contrast .season-box h3,
 body.high-contrast .character-box h3,
 body.high-contrast .realm-box h3 {
-    color: #ffff00 !important;
-    border-bottom-color: #ffffff !important;
+    color: #c084fc !important;
+    border-bottom-color: #a855f7 !important;
 }
 
 body.high-contrast .card p,
@@ -303,30 +303,19 @@ body.high-contrast .character-box,
 body.high-contrast .realm-box,
 body.high-contrast .clover-list li {
     background: #000000 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #a855f7 !important;
     box-shadow: none !important;
 }
 
 body.high-contrast .btn-explore,
 body.high-contrast .btn-contrast {
-    background-color: #ffff00 !important;
-    color: #000000 !important;
-    border: 2px solid #ffffff !important;
+    background-color: #a855f7 !important;
+    color: #ffffff !important;
+    border: 2px solid #c084fc !important;
     font-weight: 900 !important;
 }
 
-/* ADAPTAÇÃO PARA DISPOSITIVOS MÓVEIS */
-@media (max-width: 600px) {
-    .quote {
-        font-size: 1rem;
-    }
-    .card {
-        padding: 20px 15px;
-    }
-    .btn-contrast {
-        top: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        font-size: 0.8rem;
-    }
+body.high-contrast .btn-explore:hover,
+body.high-contrast .btn-contrast:hover {
+    background-color: #9333ea !important;
 }
